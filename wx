@@ -1,0 +1,149 @@
+import { shutterValues, apertureValues } from './cameraSettings';
+/* To keep this reasonable, we're going to say exposure value (EV) exists on a scale from 5 (dim indoor light ) to 
+15 (bright outdoor light) (see https://en.wikipedia.org/wiki/Exposure_value ). This means we can think of our lighting
+scenarios as existing on a spectrum of 5 to 15, or simply 0 to 10. (In the code from previous CSs I increased this to
+0 - 13; no idea why but I'm guessing it felt better-calibrated so I'll go with that edit.)
+*/
+
+export const exposureCalculator = ({lighting, iso, aperture, setAperture, shutterSpeed, setShutterSpeed, mode}) => {
+
+   // I've hard coded these baseline index positions but these would need to be dynamic if we
+   // ever have other cameras (different shutter speeds) or lenses (different apertures).
+   // Based on "sunny 16" rule:
+   const isoBaselineIndex = 0; //100
+   const apertureBaselineIndex = 15; //f16
+   const shutterSpeedBaselineIndex = 20; //1/100
+
+   //Update all deltas:
+   const lightingDelta = roundToThird((lighting * 13) - 13); //creates scale from -13 (dim) to 0 (bright sunny)
+   const isoDelta = iso - isoBaselineIndex;
+   const apertureDelta = aperture - apertureBaselineIndex;
+   const shutterSpeedDelta = shutterSpeed - shutterSpeedBaselineIndex;
+
+
+   // PROGRAM ***********************************************************************
+   const calcProgramValues = () => {
+      //assess shutter and aperture requirement
+      const rawEv = roundToThird( (isoDelta * 3) + (lightingDelta * 3));
+
+      //divvy up exposure settings to acheive Ev of zero
+      const targetApertureIndex	= apertureBaselineIndex + Math.floor( rawEv * .5 );
+      const targetShutterSpeedIndex  = shutterSpeedBaselineIndex + Math.ceil( rawEv * .5 );
+      
+      //test for aperture index out of bounds
+      let clampedApertureIndex;
+      if ( targetApertureIndex > apertureBaselineIndex ) {
+         clampedApertureIndex = Math.min( targetApertureIndex, apertureValues.length - 1 );
+      } else if ( targetApertureIndex < apertureBaselineIndex ) {
+         clampedApertureIndex = Math.max( targetApertureIndex, 0 );
+      } else {
+         clampedApertureIndex = targetApertureIndex;
+      }
+
+      //how many, if any, out of bounds indexes need to be thrown to the other control
+      const extraApertureIndex = targetApertureIndex - clampedApertureIndex;
+
+      //test for shutter speed index out of bounds
+      let clampedShutterSpeedIndex;
+      if ( targetShutterSpeedIndex > shutterSpeedBaselineIndex ) {
+         clampedShutterSpeedIndex = Math.min( targetShutterSpeedIndex, shutterValues.length - 1 );
+      } else if ( targetShutterSpeedIndex < shutterSpeedBaselineIndex ) {
+         clampedShutterSpeedIndex = Math.max( targetShutterSpeedIndex, 0 );
+      } else {
+         clampedShutterSpeedIndex = targetShutterSpeedIndex;
+      }
+
+      //how many, if any, out of bounds indexes need to be thrown to the other control
+      const extraShutterSpeedIndex = targetShutterSpeedIndex - clampedShutterSpeedIndex;
+      
+      //Set default aperture value for actual plus extras that shutter speed control couldn't handle
+      let finalApertureIndex;
+      //check for out of bounds
+		if ( clampedApertureIndex > apertureBaselineIndex )
+         finalApertureIndex = Math.min( clampedApertureIndex + extraShutterSpeedIndex, apertureValues.length - 1 );
+      else if ( clampedApertureIndex < apertureBaselineIndex )
+         finalApertureIndex = Math.max( clampedApertureIndex + extraShutterSpeedIndex, 0 );
+      else
+         finalApertureIndex = clampedApertureIndex + extraShutterSpeedIndex;
+
+      //Set default shutter speed value for actual plus extras that the aperture control couldn't handle
+      let finalShutterSpeedIndex;
+      //test for shutter speed index out of bounds
+      if ( clampedShutterSpeedIndex > shutterSpeedBaselineIndex )
+         finalShutterSpeedIndex = Math.min( clampedShutterSpeedIndex + extraApertureIndex, shutterValues.length - 1 );
+      else if ( clampedShutterSpeedIndex < shutterSpeedBaselineIndex )
+         finalShutterSpeedIndex = Math.max( clampedShutterSpeedIndex + extraApertureIndex, 0 );
+      else 
+         finalShutterSpeedIndex = clampedShutterSpeedIndex + extraApertureIndex;
+				
+
+      //whew! finally, apply the settings
+      setAperture(finalApertureIndex);
+      setShutterSpeed(finalShutterSpeedIndex);
+   }
+   
+   // APERTURE PRIORITY *************************************************************
+   const calcAvValues = () => {
+      //assess shutter speed requirement
+      const rawEv = roundToThird( (isoDelta * 3) + (lightingDelta * 3) - apertureDelta );
+      const targetShutterSpeedIndex = shutterSpeedBaselineIndex + rawEv;
+
+      //test for shutter speed index out of bounds
+      let clampedShutterSpeedIndex;
+      if ( targetShutterSpeedIndex > shutterSpeedBaselineIndex ) {
+         clampedShutterSpeedIndex = Math.min( targetShutterSpeedIndex, shutterValues.length - 1 );
+      } else if ( targetShutterSpeedIndex < shutterSpeedBaselineIndex ) {
+         clampedShutterSpeedIndex = Math.max( targetShutterSpeedIndex, 0 );
+      } else {
+         clampedShutterSpeedIndex = targetShutterSpeedIndex;
+      }
+
+      setShutterSpeed(clampedShutterSpeedIndex);
+   }
+
+   // SHUTTER PRIORITY *************************************************************
+   const calcTvValues = () => {
+      //assess aperture requirement
+      const rawEv = roundToThird( (isoDelta * 3) + (lightingDelta * 3) - shutterSpeedDelta );
+      const targetApertureIndex	= apertureBaselineIndex + rawEv;
+
+      //test for aperture index out of bounds
+      let clampedApertureIndex;
+      if ( targetApertureIndex > apertureBaselineIndex ) {
+         clampedApertureIndex = Math.min( targetApertureIndex, apertureValues.length - 1 );
+      } else if ( targetApertureIndex < apertureBaselineIndex ) {
+         clampedApertureIndex = Math.max( targetApertureIndex, 0 );
+      } else {
+         clampedApertureIndex = targetApertureIndex;
+      }
+
+      setAperture(clampedApertureIndex);
+   }
+
+   // MANUAL *************************************************************
+      // Nothing to manage for Manual -- it just works.
+
+
+   switch(mode){
+      case 'P':
+         calcProgramValues();
+         break;
+      case 'Av':
+         calcAvValues();
+         break;
+      case 'Tv':
+         calcTvValues();
+         break;
+      default: //nothing
+   }
+   const ev = roundToThird( lightingDelta + ( -apertureDelta / 3 ) + ( -shutterSpeedDelta / 3 ) + isoDelta ); //Round.Third
+   return ev;
+}
+
+const roundToThird = ( n ) => {
+   return (Math.round(n * 3)) / 3; //i.e. takes 1.45 and returns 1.33333333333333
+}
+
+// const roundToHundredths = (n) => {
+//    return Math.round(n * 100) * .01; 	//i.e. takes .3333333333333333333333 and returns .33
+// }
