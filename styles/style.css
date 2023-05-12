@@ -3308,7 +3308,7 @@ main {
     max-height: 100vh;
     position: relative;
     display: grid;
-    grid-template-columns: 85vw; 
+    grid-template-columns: 40vh; 
     grid-template-rows: 30vh 20vh;
     gap: var(--basic-margin-mobile); 
 }
@@ -3430,7 +3430,7 @@ main {
 aside {
     position: relative;
     display: grid;
-    grid-template-columns: 85vw; 
+    grid-template-columns: 40vh; 
     grid-template-rows: 13.2vh 19.5vh 13.2vh 13.2vh 13.2vh 30vh 13.2vh;
     row-gap: var(--basic-margin-mobile);
     overflow-y: scroll; 
