@@ -2056,8 +2056,130 @@ aside {
     column-gap: 1.5vh;
     row-gap: 1vh;;
 }
-#filter-button {
+#filter1-button {
+    z-index: 4;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+#filter1-button:hover {
+    -webkit-transition: all 300ms;
+     -moz-transition: all 300ms;
+          transition: all 300ms;
+}
 
+#filter1-bg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("/img/icons/filter-1-blue.png");
+    position: relative;
+    width: 70%;
+    height: 70%;
+    z-index: 5;
+    margin: auto;
+    margin-top: 9%;
+}
+#filter1-button:hover > #filter1-bg{
+    background-image: url("/img/icons/filter-1-blue.png");
+    -webkit-transition: all 300ms;
+     -moz-transition: all 300ms;
+          transition: all 300ms;
+}
+
+#filter2-button {
+    z-index: 4;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+#filter2-button:hover {
+    -webkit-transition: all 300ms;
+     -moz-transition: all 300ms;
+          transition: all 300ms;
+}
+
+#filter2-bg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("/img/icons/filter-2-grey.png");
+    position: relative;
+    width: 70%;
+    height: 70%;
+    z-index: 5;
+    margin: auto;
+    margin-top: 9%;
+}
+#filter2-button:hover > #filter2-bg{
+    background-image: url("/img/icons/filter-2-blue.png");
+    -webkit-transition: all 300ms;
+     -moz-transition: all 300ms;
+          transition: all 300ms;
+}
+
+
+#filter3-button {
+    z-index: 4;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+#filter3-button:hover {
+    -webkit-transition: all 300ms;
+     -moz-transition: all 300ms;
+          transition: all 300ms;
+}
+
+#filter3-bg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("/img/icons/filter-3-grey.png");
+    position: relative;
+    width: 70%;
+    height: 70%;
+    z-index: 5;
+    margin: auto;
+    margin-top: 9%;
+}
+#filter3-button:hover > #filter3-bg{
+    background-image: url("/img/icons/filter-3-blue.png");
+    -webkit-transition: all 300ms;
+     -moz-transition: all 300ms;
+          transition: all 300ms;
+}
+
+
+#filter4-button {
+    z-index: 4;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+#filter4-button:hover {
+    -webkit-transition: all 300ms;
+     -moz-transition: all 300ms;
+          transition: all 300ms;
+}
+
+#filter4-bg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("/img/icons/filter-4-grey.png");
+    position: relative;
+    width: 70%;
+    height: 70%;
+    z-index: 5;
+    margin: auto;
+    margin-top: 9%;
+}
+#filter4-button:hover > #filter4-bg{
+    background-image: url("/img/icons/filter-4-blue.png");
+    -webkit-transition: all 300ms;
+     -moz-transition: all 300ms;
+          transition: all 300ms;
 }
 
 
@@ -2981,8 +3103,130 @@ aside::-webkit-scrollbar {
     column-gap: 2vh;
     row-gap: 1vh;
 }
-#filter-button {
+#filter1-button {
+    z-index: 4;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+#filter1-button:hover {
+    -webkit-transition: all 300ms;
+     -moz-transition: all 300ms;
+          transition: all 300ms;
+}
 
+#filter1-bg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("/img/icons/filter-1-blue.png");
+    position: relative;
+    width: 70%;
+    height: 70%;
+    z-index: 5;
+    margin: auto;
+    margin-top: 9%;
+}
+#filter1-button:hover > #filter1-bg{
+    background-image: url("/img/icons/filter-1-blue.png");
+    -webkit-transition: all 300ms;
+     -moz-transition: all 300ms;
+          transition: all 300ms;
+}
+
+#filter2-button {
+    z-index: 4;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+#filter2-button:hover {
+    -webkit-transition: all 300ms;
+     -moz-transition: all 300ms;
+          transition: all 300ms;
+}
+
+#filter2-bg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("/img/icons/filter-2-grey.png");
+    position: relative;
+    width: 70%;
+    height: 70%;
+    z-index: 5;
+    margin: auto;
+    margin-top: 9%;
+}
+#filter2-button:hover > #filter2-bg{
+    background-image: url("/img/icons/filter-2-blue.png");
+    -webkit-transition: all 300ms;
+     -moz-transition: all 300ms;
+          transition: all 300ms;
+}
+
+
+#filter3-button {
+    z-index: 4;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+#filter3-button:hover {
+    -webkit-transition: all 300ms;
+     -moz-transition: all 300ms;
+          transition: all 300ms;
+}
+
+#filter3-bg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("/img/icons/filter-3-grey.png");
+    position: relative;
+    width: 70%;
+    height: 70%;
+    z-index: 5;
+    margin: auto;
+    margin-top: 9%;
+}
+#filter3-button:hover > #filter3-bg{
+    background-image: url("/img/icons/filter-3-blue.png");
+    -webkit-transition: all 300ms;
+     -moz-transition: all 300ms;
+          transition: all 300ms;
+}
+
+
+#filter4-button {
+    z-index: 4;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+#filter4-button:hover {
+    -webkit-transition: all 300ms;
+     -moz-transition: all 300ms;
+          transition: all 300ms;
+}
+
+#filter4-bg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("/img/icons/filter-4-grey.png");
+    position: relative;
+    width: 70%;
+    height: 70%;
+    z-index: 5;
+    margin: auto;
+    margin-top: 9%;
+}
+#filter4-button:hover > #filter4-bg{
+    background-image: url("/img/icons/filter-4-blue.png");
+    -webkit-transition: all 300ms;
+     -moz-transition: all 300ms;
+          transition: all 300ms;
 }
 
 }
@@ -3064,7 +3308,7 @@ main {
     max-height: 100vh;
     position: relative;
     display: grid;
-    grid-template-columns: 40vh; 
+    grid-template-columns: 85vw; 
     grid-template-rows: 30vh 20vh;
     gap: var(--basic-margin-mobile); 
 }
@@ -3186,7 +3430,7 @@ main {
 aside {
     position: relative;
     display: grid;
-    grid-template-columns: 40vh; 
+    grid-template-columns: 85vw; 
     grid-template-rows: 13.2vh 19.5vh 13.2vh 13.2vh 13.2vh 30vh 13.2vh;
     row-gap: var(--basic-margin-mobile);
     overflow-y: scroll; 
@@ -3899,7 +4143,129 @@ aside::-webkit-scrollbar {
     column-gap: 2vh;
     row-gap: 1vh;
 }
-#filter-button {
+#filter1-button {
+    z-index: 4;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+#filter1-button:hover {
+    -webkit-transition: all 300ms;
+     -moz-transition: all 300ms;
+          transition: all 300ms;
+}
 
+#filter1-bg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("/img/icons/filter-1-blue.png");
+    position: relative;
+    width: 70%;
+    height: 70%;
+    z-index: 5;
+    margin: auto;
+    margin-top: 9%;
+}
+#filter1-button:hover > #filter1-bg{
+    background-image: url("/img/icons/filter-1-blue.png");
+    -webkit-transition: all 300ms;
+     -moz-transition: all 300ms;
+          transition: all 300ms;
+}
+
+#filter2-button {
+    z-index: 4;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+#filter2-button:hover {
+    -webkit-transition: all 300ms;
+     -moz-transition: all 300ms;
+          transition: all 300ms;
+}
+
+#filter2-bg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("/img/icons/filter-2-grey.png");
+    position: relative;
+    width: 70%;
+    height: 70%;
+    z-index: 5;
+    margin: auto;
+    margin-top: 9%;
+}
+#filter2-button:hover > #filter2-bg{
+    background-image: url("/img/icons/filter-2-blue.png");
+    -webkit-transition: all 300ms;
+     -moz-transition: all 300ms;
+          transition: all 300ms;
+}
+
+
+#filter3-button {
+    z-index: 4;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+#filter3-button:hover {
+    -webkit-transition: all 300ms;
+     -moz-transition: all 300ms;
+          transition: all 300ms;
+}
+
+#filter3-bg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("/img/icons/filter-3-grey.png");
+    position: relative;
+    width: 70%;
+    height: 70%;
+    z-index: 5;
+    margin: auto;
+    margin-top: 9%;
+}
+#filter3-button:hover > #filter3-bg{
+    background-image: url("/img/icons/filter-3-blue.png");
+    -webkit-transition: all 300ms;
+     -moz-transition: all 300ms;
+          transition: all 300ms;
+}
+
+
+#filter4-button {
+    z-index: 4;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+#filter4-button:hover {
+    -webkit-transition: all 300ms;
+     -moz-transition: all 300ms;
+          transition: all 300ms;
+}
+
+#filter4-bg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("/img/icons/filter-4-grey.png");
+    position: relative;
+    width: 70%;
+    height: 70%;
+    z-index: 5;
+    margin: auto;
+    margin-top: 9%;
+}
+#filter4-button:hover > #filter4-bg{
+    background-image: url("/img/icons/filter-4-blue.png");
+    -webkit-transition: all 300ms;
+     -moz-transition: all 300ms;
+          transition: all 300ms;
 }
 }
