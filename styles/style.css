@@ -3434,7 +3434,7 @@ aside {
     grid-template-rows: 13.2vh 19.5vh 13.2vh 13.2vh 13.2vh 30vh 13.2vh;
     row-gap: var(--basic-margin-mobile);
     overflow-y: scroll; 
-    max-height: 100vh;
+    max-height: 70vh;
     border-radius: var(--panel-border-radius);
     margin-bottom: 3vh;
 }
