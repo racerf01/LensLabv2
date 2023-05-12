@@ -2272,7 +2272,7 @@ main {
 
 #viewfinder {
     border-radius: var(--panel-border-radius);
-    background-size: 60vh;
+    background-size: 65vh;
 }
 #overlay-1 {
     height: 35vh;
