@@ -21,8 +21,8 @@ var filterModel = document.getElementById('model')
 filter1_button.addEventListener('click', (event) => {
     currentFilter = 1; 
 
-    filterModel.style.filter = '';
-    filterBG.style.filter = '';
+    filterModel.style.filter = 'contrast(100%) saturate(100%) hue-rotate(0deg) sepia(0%) grayscale(0%)';
+    filterBG.style.filter = 'contrast(100%) saturate(100%) hue-rotate(0deg) sepia(0%) grayscale(0%)';
 
     filterText.textContent = 'Natural'
 
@@ -37,8 +37,8 @@ filter2_button.addEventListener('click', (event) => {
 
     filterText.textContent = 'Film'
 
-    filterModel.style.filter = 'contrast(90%) brightness(110%) saturate(150%) hue-rotate(-10deg)';
-    filterBG.style.filter = 'contrast(100%) brightness(100%) saturate(100%) hue-rotate(-10deg)';
+    filterModel.style.filter = 'contrast(90%) saturate(150%) hue-rotate(-10deg)';
+    filterBG.style.filter = 'contrast(100%) saturate(100%) hue-rotate(-10deg)';
 
     filter1_bg.style.backgroundImage = 'url("/img/icons/filter-1-grey.png")';
     filter2_bg.style.backgroundImage = 'url("/img/icons/filter-2-blue.png")';
@@ -51,8 +51,8 @@ filter3_button.addEventListener('click', (event) => {
 
     filterText.textContent = 'Bright'
 
-    filterModel.style.filter = 'contrast(110%) brightness(110%) saturate(130%)';
-    filterBG.style.filter = 'contrast(100%) brightness(100%) saturate(130%)';
+    filterModel.style.filter = 'contrast(110%) saturate(130%)';
+    filterBG.style.filter = 'contrast(100%) saturate(130%)';
 
     filter1_bg.style.backgroundImage = 'url("/img/icons/filter-1-grey.png")';
     filter2_bg.style.backgroundImage = 'url("/img/icons/filter-2-grey.png")';
@@ -65,8 +65,8 @@ filter4_button.addEventListener('click', (event) => {
 
     filterText.textContent = 'B&W'
 
-    filterModel.style.filter = 'contrast(110%) brightness(110%) sepia(30%) grayscale(100%)';
-    filterBG.style.filter = 'contrast(110%) brightness(110%) sepia(30%) grayscale(100%)';
+    filterModel.style.filter = 'contrast(110%) sepia(30%) grayscale(100%)';
+    filterBG.style.filter = 'contrast(110%) sepia(30%) grayscale(100%)';
 
     filter1_bg.style.backgroundImage = 'url("/img/icons/filter-1-grey.png")';
     filter2_bg.style.backgroundImage = 'url("/img/icons/filter-2-grey.png")';
