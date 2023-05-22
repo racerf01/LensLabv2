@@ -19,12 +19,16 @@ const shoot_panel = document.getElementById("shoot-panel")
 
 var currentTutorial = localStorage.getItem('currentTutorial'); 
 
+const loader = document.getElementById("preloader")
+
 var count = 1; 
 
 var nextEnabled = true;
 var backEnabled = false;
 
 window.addEventListener("load", (event) => {
+    loader.style.display = "none";
+
     if (currentTutorial == 1) {
         tutorial_head.textContent = tutorial1_head1;
         tutorial_head2.textContent = 'Lesson 1'
@@ -35,7 +39,7 @@ window.addEventListener("load", (event) => {
         tutorial_head.textContent = tutorial2_head1;
         tutorial_head2.textContent = 'Lesson 2'
         tutorial_text.textContent = tutorial2_slide1;
-        slide_count.textContent = "2/6"
+        slide_count.textContent = "1/6"
     }
     if (currentTutorial == 3) {
         tutorial_head.textContent = tutorial3_head1;

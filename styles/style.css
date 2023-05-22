@@ -44,7 +44,16 @@
     box-sizing: border-box;
 }
 
-
+#preloader {
+    background-color: white;
+    background-image: url(/img/icons8-loading.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 10;
+}
 
 
 /* SCROLL BAR */
