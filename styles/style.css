@@ -129,7 +129,7 @@ aside::-webkit-scrollbar-track {
 #tutorial-text {
     position: relative;
     padding-top: 5.8vh;
-    width: 60%;
+    width: 80%;
 }
 
 #tutorial-head {
@@ -265,17 +265,25 @@ main {
 }
 
 .switch-button {
-    background-color: var(--color-maintext);
     width: 2.7vh;
     height: 2.7vh;
     border-radius: 100%;
+    cursor: pointer;
 }
 
 #back-button {
+    background-image: url(/img/button-back.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
     float: left;
 }
 
 #forward-button {   
+    background-image: url(/img/button-next.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
     float: right;
 }
 
@@ -1186,7 +1194,7 @@ aside {
 #tutorial-text {
     position: relative;
     padding-top: 5.8vh;
-    width: 60%;
+    width: 80%;
 }
 
 #tutorial-head {
@@ -1328,10 +1336,18 @@ main {
 }
 
 #back-button {
+    background-image: url(/img/button-back.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
     float: left;
 }
 
 #forward-button {   
+    background-image: url(/img/button-next.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
     float: right;
 }
 
@@ -2229,7 +2245,7 @@ aside {
 #tutorial-text {
     position: relative;
     padding-top: 5vh;
-    width: 60%;
+    width: 80%;
 }
 
 #tutorial-head {
@@ -2374,10 +2390,18 @@ main {
 }
 
 #back-button {
+    background-image: url(/img/button-back.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
     float: left;
 }
 
 #forward-button {   
+    background-image: url(/img/button-next.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
     float: right;
 }
 
@@ -3271,7 +3295,7 @@ aside::-webkit-scrollbar {
 #tutorial-text {
     position: relative;
     padding-top: 5vh;
-    width: 60%;
+    width: 80%;
 }
 
 #tutorial-head {
@@ -3418,10 +3442,18 @@ main {
 }
 
 #back-button {
+    background-image: url(/img/button-back.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
     float: left;
 }
 
 #forward-button {   
+    background-image: url(/img/button-next.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
     float: right;
 }
 
@@ -3631,7 +3663,7 @@ aside::-webkit-scrollbar {
     margin: auto;
 }
 #partly-cloudy-button:hover > #partly-cloudy-bg{
-    background-image: url("/img/icons/partly_cloudy_blue\ .png");
+    background-image: url("/img/icons/partly_cloudy_blue.png");
     -webkit-transition: all 300ms;
      -moz-transition: all 300ms;
           transition: all 300ms;
@@ -3666,7 +3698,7 @@ aside::-webkit-scrollbar {
     margin: auto;
 }
 #mostly-sunny-button:hover > #mostly-sunny-bg{
-    background-image: url("/img/icons/mostly_sunny_blue\ .png");
+    background-image: url("/img/icons/mostly_sunny_blue.png");
     -webkit-transition: all 300ms;
      -moz-transition: all 300ms;
           transition: all 300ms;
