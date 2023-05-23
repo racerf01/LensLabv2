@@ -10,12 +10,18 @@ const headText = document.getElementById('shoot-cont-head')
 
 const closeButton = document.getElementById('close-button')
 
+const shootResult = document.getElementById('shoot-result')
+
 window.addEventListener("load", (event) => { 
     shoot_cont.style.display = "none"; 
 });
 
 
 closeButton.addEventListener('click', (event) => {
+
+    shootResult.style.backgroundImage = 'url("/img/icons8-loading.gif")'
+    shootResult.style.backgroundSize = '5vh';
+
     shoot_cont.style.display = "none"; 
 })
 
