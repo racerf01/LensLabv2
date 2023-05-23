@@ -5,15 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
 
     <!--STYLESHEET-->
     <link rel="stylesheet" href="styles/style.css">
 
-    <title>LensLab</title>
+    <title>LensLab | DLSR Camera Simulator</title>
+    <header>
+        <div id="logo" href="/index.html"></div>
+        <ul id="menu-list">
+            <li><a class="menu" href="/index.html">Study</a></li>
+            <li><a class="menu" href="#">About</a></li>
+            <li><a class="menu" id="tutorial-sandbox" href="/sim.html">Sandbox</a></li>
+        </ul>
+      </header>
+      <div id="shoot-overlay" style="background-color: rgba(0, 0, 0, 0.5)">
+        <div id="shoot-cont">
+            <div id="shoot-result"></div>
+            <h1 id="shoot-cont-head">Good Job!</h1>
+            <ul id="shoot-cont-text">
+                <a class="points" id="exposure-text-result"></a>
+                <a class="points" id="aperture-text-result"></a>
+                <a class="points" id="shutter-text-result"></a>
+                <a class="points" id="iso-text-result"></a>
+            </ul>
+            <div id="close-button"></div>
+        </div>
+      </div>
 </head>
 <body>
+    
     <main>
         <div id="meter-cont">
             <h4 id="shutter-meter">125</h4>
@@ -54,7 +75,7 @@
                     <a id="shoot-text-left">Snap Photo</a><a id="shoot-text-right">Ready</a>
                 </div>
                 <div id="shoot-grid">
-                    <div id="shoot-button" class="set-button"></div>
+                    <div id="shoot-button" class="set-button"><div id="shoot-bg"></div></div>
                 </div>
             </div>
             <div class="inst-cont" id="lightning-panel">
@@ -145,7 +166,7 @@
 
     <div id="preloader"></div>
 
-    
+
     <script src="scripts/DistanceDrag.js"></script>
     <script src="scripts/FocalLengthDrag.js"></script>
     <script src="scripts/CameraSettings.js"></script>
@@ -165,7 +186,7 @@
     <script src="/scripts/tutorials scripts/tutorial3.js"></script>
     <script src="/scripts/tutorials scripts/tutorial4.js"></script>
     <script src="/scripts/tutorials scripts/tutorial5.js"></script>
-
-    
+    <script src="scripts/shootFunc.js"></script>
+    <script src="scripts/createFinalResult.js"></script>
 </body>
 </html>

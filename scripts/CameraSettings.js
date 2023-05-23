@@ -107,7 +107,7 @@ ap_slider.addEventListener("input", (event) => {
   } else {
     ap_slider_cont.disabled = false;
     const value = parseInt(ap_slider.value);
-    const apt = apValues[value - 1];
+    apt = apValues[value - 1];
     const blurLevels = {
       1.4: 0,
       1.8: 0.05,

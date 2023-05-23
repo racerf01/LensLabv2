@@ -40,7 +40,6 @@
     appearance: none;
     border: 0;
     text-decoration: none;
-    list-style: none;
     box-sizing: border-box;
 }
 
@@ -54,6 +53,8 @@
     position: fixed;
     z-index: 10;
 }
+
+
 
 
 /* SCROLL BAR */
@@ -99,6 +100,117 @@ aside::-webkit-scrollbar-track {
 /* Large devices (laptops/desktops, 1025px and up) */
 /* --------------------------------------------------------------------------- */
 @media (min-width: 1024px) and (orientation: landscape) {
+
+    #shoot-overlay {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        z-index: 9;
+        align-items: center;
+    }
+    #shoot-cont {
+        position: relative;
+        background-color: var(--color-panel);
+        border-radius: var(--panel-border-radius);
+        width: 120vh;
+        height: 70vh;
+        margin: 0 auto;
+        margin-top: 15vh;
+        overflow: hidden;
+    }
+
+    #shoot-result {
+        position: relative;
+        top: 10vh;
+        left: 5vh;
+        width: 70vh;
+        height: 50vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 5vh;
+        background-image: url(/img/icons8-loading.gif);
+        border-radius: var(--panel-border-radius);
+    }
+
+    
+
+    #shoot-cont-head {
+        position: absolute;
+        left: 80vh;
+        top: 10vh;
+        font-size: 3.5vh;
+    }
+
+    #shoot-cont-text {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        list-style-type: circle;
+        left: 80vh;
+        top: 20vh;
+        width: 35vh;
+
+    }
+    .points {
+        margin-bottom: 2vh;
+        width: 100%;
+        font-size: 2vh;
+        color: #9C9C9C;
+    }
+
+    #close-button {
+        background-image: url(/img/icons8-macos-close-90.png);
+        width: 3.5vh;
+        height: 3.5vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        left: 115vh;
+        top: 1vh;
+        cursor: pointer;
+    }
+
+    header {
+        position: fixed;
+        z-index: 4;
+        top: 4%;
+        margin-left: 180vh;
+        width: 100vh;
+      }
+    
+    #logo {
+        position: absolute;
+        right: 148vh ;
+        background-image: url(/img/Logo.png);
+        z-index: 4;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100vh;
+        height: 2vh;
+      }
+    
+    #menu-list {
+        position: relative;
+        list-style-type: none;
+        display: inline;
+      }
+      
+      /* Display menu items inline and add spacing */
+      li {
+        display: inline-block;
+        margin-right: 2vh;
+    
+      }
+    .menu {
+        text-decoration: none;
+        font-family: 'LL Riforma Regular';
+        font-weight: normal;
+        color: var(--color-maintext);
+        font-size: 2vh;
+    }
+
 
     h1 {
         font-weight: normal;
@@ -190,8 +302,9 @@ main {
     width: 5vh;
     height: 5vh;
     top: 50%;
+    left: 50%;
     margin: 0 auto;
-    position: relative;
+    position: absolute;
 
 }
 
@@ -247,7 +360,7 @@ main {
     border-radius: var(--panel-border-radius);
 }
 #model {
-    top: -10%;
+    top: 0%;
     min-width: 50vh;
     min-height: 50vh;
     max-width: 100vh;
@@ -348,6 +461,25 @@ aside {
     row-gap: 1vh;
 }
 #shoot-button {
+    z-index: 3;
+    cursor: pointer;
+}
+#shoot-bg {
+    position: relative;
+    background-color: #9C9C9C;
+    width: 50%;
+    height: 50%;
+    top: 24%;
+    border-radius: 2vh;
+    z-index: 4;
+    margin: 0 auto;
+    -webkit-transition: all 300ms;
+     -moz-transition: all 300ms;
+          transition: all 300ms;
+
+}
+#shoot-button:hover #shoot-bg {
+    background-color: #2C00FF;
 }
 /* ------------------------ LIGHTNING PANEL -------------------------------- */
 #lightning-panel {
@@ -1166,7 +1298,123 @@ aside {
 /* Medium devices (landscape tablets, 769px and up) */
 /* ----------------------------------------------------------------------------------------------------------- */
 /* ------------------------------------------------- */
-@media (max-width: 1024px) and (orientation: landscape) {    
+@media (max-width: 1024px) and (orientation: landscape) {  
+
+    #shoot-overlay {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        z-index: 9;
+        align-items: center;
+    }
+    #shoot-cont {
+        position: relative;
+        background-color: var(--color-panel);
+        border-radius: var(--panel-border-radius);
+        width: 100vh;
+        height: 60vh;
+        margin: 0 auto;
+        margin-top: 18vh;
+        overflow: hidden;
+    }
+
+    #shoot-result {
+        position: relative;
+        top: 10vh;
+        left: 5vh;
+        width: 60vh;
+        height: 40vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 5vh;
+        background-image: url(/img/icons8-loading.gif);
+        border-radius: var(--panel-border-radius);
+    }
+
+    
+
+    #shoot-cont-head {
+        position: absolute;
+        left: 70vh;
+        top: 10vh;
+        font-size: 3vh;
+    }
+
+    #shoot-cont-text {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        list-style-type: circle;
+        left: 70vh;
+        top: 20vh;
+        width: 30vh;
+
+    }
+    .points {
+        margin-bottom: 2vh;
+        width: 100%;
+        font-size: 1.7vh;
+        color: #9C9C9C;
+    }
+
+    #close-button {
+        background-image: url(/img/icons8-macos-close-90.png);
+        width: 3.5vh;
+        height: 3.5vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        left: 95vh;
+        top: 1vh;
+        cursor: pointer;
+    }
+
+
+
+    
+    header {
+        position: fixed;
+        z-index: 4;
+        top: 10%;
+        margin-left: 165vh;
+        width: 100vh;
+      }
+    
+    #logo {
+        position: absolute;
+        right: 130vh ;
+        background-image: url(/img/Logo.png);
+        z-index: 4;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100vh;
+        height: 1.5vh;
+      }
+    
+    ul {
+        position: relative;
+        list-style-type: none;
+        display: inline;
+      }
+      
+      /* Display menu items inline and add spacing */
+      li {
+        display: inline-block;
+        margin-right: 2vh;
+    
+      }
+    .menu {
+        text-decoration: none;
+        font-family: 'LL Riforma Regular';
+        font-weight: normal;
+        color: var(--color-maintext);
+        font-size: 1.5vh;
+    }
+
+
+
     h1 {
         font-weight: normal;
         color: var(--color-maintext);
@@ -1249,7 +1497,6 @@ main {
     height: 45vh;
 }
 #viewfinder-marker {
-    position: absolute;
     z-index: 3;
     background-image: url("/img/viewfinder-marker.png");
     background-position: center;
@@ -1258,8 +1505,9 @@ main {
     width: 5vh;
     height: 5vh;
     top: 50%;
+    left: 50%;
     margin: 0 auto;
-    position: relative;
+    position: absolute;
 
 }
 
@@ -1311,6 +1559,7 @@ main {
     border-radius: var(--panel-border-radius);
 }
 #model {
+    top: 12%;
     position: absolute;
     min-width: 40vh;
     min-height: 40vh;
@@ -1410,6 +1659,25 @@ aside {
     row-gap: 1vh;
 }
 #shoot-button {
+    z-index: 3;
+    cursor: pointer;
+}
+#shoot-bg {
+    position: relative;
+    background-color: #9C9C9C;
+    width: 50%;
+    height: 50%;
+    top: 24%;
+    border-radius: 2vh;
+    z-index: 4;
+    margin: 0 auto;
+    -webkit-transition: all 300ms;
+     -moz-transition: all 300ms;
+          transition: all 300ms;
+
+}
+#shoot-button:hover #shoot-bg {
+    background-color: #2C00FF;
 }
 /* ------------------------ LIGHTNING PANEL -------------------------------- */
 #lightning-panel {
@@ -2216,6 +2484,120 @@ aside {
 /* ----------------------------------------------------------------------------------------------------------------- */
 /* ----------------------------------------------------- */
 @media (max-width: 1024px) and (orientation: portrait) {
+
+    #shoot-overlay {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        z-index: 9;
+        align-items: center;
+    }
+    #shoot-cont {
+        position: relative;
+        background-color: var(--color-panel);
+        border-radius: var(--panel-border-radius);
+        width: 45vh;
+        height: 80vh;
+        margin: 0 auto;
+        margin-top: 10vh;
+        overflow: hidden;
+    }
+
+    #shoot-result {
+        position: relative;
+        top: 10vh;
+        left: 2.5vh;
+        width: 40vh;
+        height: 30vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 5vh;
+        
+        background-image: url(/img/icons8-loading.gif);
+        border-radius: var(--panel-border-radius);
+    }
+
+    
+
+    #shoot-cont-head {
+        position: absolute;
+        left: 2.5vh;
+        top:5vh;
+        font-size: 3vh;
+    }
+
+    #shoot-cont-text {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        list-style-type: circle;
+        left: 2.5vh;
+        top: 45vh;
+        width: 30vh;
+
+    }
+    .points {
+        margin-bottom: 2vh;
+        width: 100%;
+        font-size: 1.7vh;
+        color: #9C9C9C;
+    }
+
+    #close-button {
+        background-image: url(/img/icons8-macos-close-90.png);
+        width: 3.5vh;
+        height: 3.5vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        left: 40vh;
+        top: 1vh;
+        cursor: pointer;
+    }
+
+
+
+    header {
+        position: fixed;
+        z-index: 4;
+        top: 3%;
+        margin-left: 108vh;
+        width: 100vh;
+      }
+    
+    #logo {
+        position: absolute;
+        right: 72vh ;
+        background-image: url(/img/Logo.png);
+        z-index: 4;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100vh;
+        height: 1.5vh;
+      }
+    
+    ul {
+        position: relative;
+        list-style-type: none;
+        display: inline;
+      }
+      
+      /* Display menu items inline and add spacing */
+      li {
+        display: inline-block;
+        margin-right: 2vh;
+    
+      }
+    .menu {
+        text-decoration: none;
+        font-family: 'LL Riforma Regular';
+        font-weight: normal;
+        color: var(--color-maintext);
+        font-size: 1.5vh;
+    }
+
     h1 {
         font-weight: normal;
         color: var(--color-maintext);
@@ -2303,7 +2685,6 @@ main {
     height: 35vh;
 }
 #viewfinder-marker {
-    position: absolute;
     z-index: 3;
     background-image: url("/img/viewfinder-marker.png");
     background-position: center;
@@ -2312,8 +2693,9 @@ main {
     width: 4vh;
     height: 4vh;
     top: 50%;
+    left: 50%;
     margin: 0 auto;
-    position: relative;
+    position: absolute;
 
 }
 
@@ -2366,6 +2748,7 @@ main {
     border-radius: var(--panel-border-radius);
 }
 #model {
+    top: 12%;
     min-width: 32vh;
     min-height: 32vh;
     max-width: 48vh;
@@ -2469,6 +2852,25 @@ aside::-webkit-scrollbar {
     row-gap: 1vh;
 }
 #shoot-button {
+    z-index: 3;
+    cursor: pointer;
+}
+#shoot-bg {
+    position: relative;
+    background-color: #9C9C9C;
+    width: 50%;
+    height: 50%;
+    top: 24%;
+    border-radius: 2vh;
+    z-index: 4;
+    margin: 0 auto;
+    -webkit-transition: all 300ms;
+     -moz-transition: all 300ms;
+          transition: all 300ms;
+
+}
+#shoot-button:hover #shoot-bg {
+    background-color: #2C00FF;
 }
 /* ------------------------ LIGHTNING PANEL -------------------------------- */
 #lightning-panel {
@@ -3267,6 +3669,122 @@ aside::-webkit-scrollbar {
 /*---------------- Extra small devices ---------------------------*/
 /* ---------------------------------------------------------------------------------------- */
 @media (max-width: 576px) and (orientation: portrait){
+
+
+    #shoot-overlay {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        z-index: 9;
+        align-items: center;
+    }
+    #shoot-cont {
+        position: relative;
+        background-color: var(--color-panel);
+        border-radius: var(--panel-border-radius);
+        width: 40vh;
+        height: 80vh;
+        margin: 0 auto;
+        margin-top: 10vh;
+        overflow: hidden;
+    }
+
+    #shoot-result {
+        position: relative;
+        top: 10vh;
+        left: 2.5vh;
+        width: 35vh;
+        height: 30vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 5vh;
+        
+        background-image: url(/img/icons8-loading.gif);
+        border-radius: var(--panel-border-radius);
+    }
+
+    
+
+    #shoot-cont-head {
+        position: absolute;
+        left: 2.5vh;
+        top:5vh;
+        font-size: 3vh;
+    }
+
+    #shoot-cont-text {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        list-style-type: circle;
+        left: 2.5vh;
+        top: 45vh;
+        width: 30vh;
+
+    }
+    .points {
+        margin-bottom: 2vh;
+        width: 100%;
+        font-size: 1.7vh;
+        color: #9C9C9C;
+    }
+
+    #close-button {
+        background-image: url(/img/icons8-macos-close-90.png);
+        width: 3vh;
+        height: 3vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        left: 35.5vh;
+        top: 1vh;
+        cursor: pointer;
+    }
+
+
+
+    header {
+        position: fixed;
+        z-index: 4;
+        top: 3%;
+        margin-left: 98vh;
+        width: 100vh;
+      }
+    
+    #logo {
+        position: absolute;
+        right: 63vh ;
+        background-image: url(/img/Logo.png);
+        z-index: 4;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100vh;
+        height: 1.5vh;
+      }
+    
+    ul {
+        position: relative;
+        list-style-type: none;
+        display: inline;
+      }
+      
+      /* Display menu items inline and add spacing */
+      li {
+        display: inline-block;
+        margin-right: 2vh;
+    
+      }
+    .menu {
+        text-decoration: none;
+        font-family: 'LL Riforma Regular';
+        font-weight: normal;
+        color: var(--color-maintext);
+        font-size: 1.5vh;
+    }
+
+
     h1 {
         font-weight: normal;
         color: var(--color-maintext);
@@ -3355,7 +3873,6 @@ main {
     height: 30vh;
 }
 #viewfinder-marker {
-    position: absolute;
     z-index: 3;
     background-image: url("/img/viewfinder-marker.png");
     background-position: center;
@@ -3364,8 +3881,9 @@ main {
     width: 4vh;
     height: 4vh;
     top: 50%;
+    left: 50%;
     margin: 0 auto;
-    position: relative;
+    position: absolute;
 
 }
 
@@ -3418,6 +3936,7 @@ main {
     border-radius: var(--panel-border-radius);
 }
 #model {
+    top: 12%;
     min-width: 27vh;
     min-height: 27vh;
     max-width: 47vh;
@@ -3520,6 +4039,25 @@ aside::-webkit-scrollbar {
     row-gap: 1vh;
 }
 #shoot-button {
+    z-index: 3;
+    cursor: pointer;
+}
+#shoot-bg {
+    position: relative;
+    background-color: #9C9C9C;
+    width: 50%;
+    height: 50%;
+    top: 24%;
+    border-radius: 2vh;
+    z-index: 4;
+    margin: 0 auto;
+    -webkit-transition: all 300ms;
+     -moz-transition: all 300ms;
+          transition: all 300ms;
+
+}
+#shoot-button:hover #shoot-bg {
+    background-color: #2C00FF;
 }
 /* ------------------------ LIGHTNING PANEL -------------------------------- */
 #lightning-panel {
