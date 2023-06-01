@@ -26,9 +26,9 @@ LensLab aims to provide users with a realistic simulation of camera settings and
 
 To run LensLab locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/username/lenslab.git`
-2. Navigate to the project directory: `cd lenslab`
-3. Run `index.html`
+1. Clone or download the repository: `git clone https://github.com/username/lenslab.git`
+2. Run `index.html`
+3. You can also access LensLab via the `racerf01,github.io`
 
 
 ## Usage
