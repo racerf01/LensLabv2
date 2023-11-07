@@ -42,7 +42,19 @@ To run LensLab locally, follow these steps:
 
 Contributions to LensLab are welcome! If you have any ideas, bug fixes, or feature enhancements, please submit a pull request. Make sure to follow the project's code of conduct and guidelines for contributing.
 
-## License
+### License (Proprietary)
 
-LensLab is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute the software according to the terms of the license.
+LensLab is protected under a proprietary license, and all rights to the software and its associated intellectual property are reserved. This license ensures that the ideas and code behind LensLab remain confidential and proprietary.
+
+#### Terms:
+
+1. You are granted a limited, non-exclusive, and non-transferable license to use LensLab solely for your personal or educational purposes.
+
+2. Any form of distribution, modification, or reverse engineering of LensLab's source code is strictly prohibited without explicit written consent from the project's maintainers.
+
+3. You may not use LensLab, in whole or in part, for any commercial or for-profit activities without the project's maintainers' express permission.
+
+4. Unauthorized use, reproduction, or distribution of LensLab's concepts or ideas is strictly prohibited.
+
+This proprietary license ensures that the intellectual property and ideas behind LensLab are safeguarded. If you have specific licensing needs or inquiries, please contact the project's maintainers.  
 
